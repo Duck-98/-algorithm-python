@@ -5,9 +5,11 @@ k번째로 나타나는 숫자를 출력하는 프로그램을 작성하세요.
 '''
 
 def func():
-    x=int(input())
-    for t in range(x):
-        n, s, e, k = map(int, input().split())
-        a=list(map(int, input().split))
-        print(a)
+  T=int(input())  
+  for t in range(T):
+    n,s,e,k = map(int, input().split())
+    a=list(map(int, input().split()))
+    a=a[s-1:e]
+    a.sort()
+    print("#%d %d" %(t,a[k-1]))
         
