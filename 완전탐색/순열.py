@@ -22,3 +22,23 @@ if __name__=="__main__":
     cnt=0
     DFS(0)
     print(cnt)
+
+
+# 라이브러리를 이용하기
+
+import sys 
+sys.stdin=open("input.txt", "r")
+from itertools import permutations, combinations
+
+n, m=map(int, input().split())
+arr=[]
+for i in range(1,n+1):
+    arr.append(i)
+
+result = list(permutations(arr, m))
+
+for tuple_val in result:
+    print(tuple_val[0], tuple_val[1])
+
+print(len(result))
+
